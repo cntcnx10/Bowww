@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier de Boulette | ลูกชิ้นเวย์โปรตีนระดับพรีเมียม</title>
+    <style>
+        /* Monochromatic & Analogous Mix Color Palette (Dark Brown to Warm Sand) */
+        :root {
+            --color-darkest: #2E1B15; /* พื้นหลังส่วนหัว */
+            --color-dark: #4A2E24;    /* การ์ดและปุ่ม */
+            --color-medium: #8A5A44;  /* สีเน้นข้อความ */
+            --color-light: #C29A84;   /* สีพื้นหลังรอง */
+            --color-lightest: #F2E3DB;/* สีพื้นหลังหลัก */
+            --color-accent: #D4AF37;  /* สีทองสำหรับรสชาติแนะนำ */
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--color-lightest);
+            color: var(--color-darkest);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--color-darkest) 0%, var(--color-dark) 100%);
+            color: var(--color-lightest);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--color-light);
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .highlight-section {
+            background-color: var(--color-darkest);
+            color: var(--color-accent);
+            text-align: center;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 2px solid var(--color-accent);
+        }
+
+        .highlight-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .flavors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .flavor-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--color-medium);
+            transition: transform 0.3s;
+        }
+
+        .flavor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .flavor-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--color-dark);
+            margin-bottom: 5px;
+        }
+
+        .flavor-desc {
+            color: var(--color-medium);
+            font-style: italic;
+        }
+
+        .pricing-section {
+            background-color: var(--color-light);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .price-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .price-card {
+            background-color: var(--color-darkest);
+            color: var(--color-lightest);
+            padding: 2rem;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .price-card span {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color-accent);
+        }
+
+        .timemachine {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(to right, var(--color-medium), var(--color-dark));
+            color: white;
+            border-radius: 15px;
+        }
+
+        .order-btn {
+            background-color: var(--color-accent);
+            color: var(--color-darkest);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #F8E231;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--color-medium);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Atelier de Boulette</h1>
+        <p>ศิลปะแห่งลูกชิ้นเวย์โปรตีน เหนือกาลเวลา</p>
+    </header>
+
+    <div class="container">
+        <!-- รสชาติแนะนำ -->
+        <div class="highlight-section">
+            <p>🌟 Signature Flavor / รสชาติแนะนำ 🌟</p>
+            <h2>มนตราสีนิล (Midnight Magic)</h2>
+            <p>ลูกชิ้นเวย์โปรตีนรสช็อกโกแลตเข้มข้น ดื่มด่ำไปกับเวทมนตร์แห่งรสชาติที่ไม่เหมือนใคร</p>
+        </div>
+
+        <!-- เมนูรสชาติทั้งหมด -->
+        <h2 style="text-align: center; color: var(--color-dark); margin-top: 3rem;">คอลเลกชันรสชาติของเรา</h2>
+        <div class="flavors-grid">
+            <div class="flavor-card">
+                <div class="flavor-name">หญ้าอุดมสมบูรณ์</div>
+                <div class="flavor-desc">(The Verdant Pasture)</div>
+                <p>รสชาเขียว</p>
+            </div>
+            <div class="flavor-card">
+                <div class="flavor-name">ทุ่งรวงทอง</div>
+                <div class="flavor-desc">(Golden Harvest)</div>
+                <p>รสข้าวโอ๊ต</p>
+            </div>
+            <div class="flavor-card">
+                <div class="flavor-name">แสงอาทิตย์รุ่งอรุณ</div>
+                <div class="flavor-desc">(Morning Glow)</div>
+                <p>รสฟักทอง</p>
+            </div>
+            <div class="flavor-card">
+                <div class="flavor-name">ขุมทรัพย์ใต้ดิน</div>
+                <div class="flavor-desc">(Earth’s Jewel)</div>
+                <p>รสมันญี่ปุ่น</p>
+            </div>
+            <div class="flavor-card">
+                <div class="flavor-name">มรกตแห่งพงไพร</div>
+                <div class="flavor-desc">(Deep Forest Emerald)</div>
+                <p>รสผักโขม</p>
+            </div>
+            <div class="flavor-card">
+                <div class="flavor-name">พละกำลังสีขาว</div>
+                <div class="flavor-desc">(Prime Strength)</div>
+                <p>รสหมูล้วน 98% แป้ง 2%</p>
+            </div>
+            <div class="flavor-card">
+                <div class="flavor-name">เจ้าสมุทร</div>
+                <div class="flavor-desc">(Oceanic Pearl)</div>
+                <p>รสกุ้งล้วน</p>
+            </div>
+            <div class="flavor-card">
+                <div class="flavor-name">มนตราสีนิล</div>
+                <div class="flavor-desc">(Midnight Magic)</div>
+                <p>รสช็อกโกแลต</p>
+            </div>
+        </div>
+
+        <!-- ราคาและขนาด -->
+        <div class="pricing-section">
+            <h2 style="color: var(--color-darkest);">ขนาดและราคา (Sizes & Prices)</h2>
+            <div class="price-grid">
+                <div class="price-card">
+                    Size S
+                    <span>69.-</span>
+                    (10 ลูก)
+                </div>
+                <div class="price-card">
+                    Size M
+                    <span>99.-</span>
+                    (15 ลูก)
+                </div>
+                <div class="price-card">
+                    Size L
+                    <span>149.-</span>
+                    (25 ลูก)
+                </div>
+            </div>
+        </div>
+
+        <!-- บริการจัดส่งไทม์แมชชีน -->
+        <div class="timemachine">
+            <h2>⏳ บริการจัดส่งผ่าน Timemachine ⏳</h2>
+            <p>ไม่ว่าคุณจะอยู่ในยุคสมัยไหน อดีต ปัจจุบัน หรืออนาคต เราพร้อมส่งมอบความอร่อยถึงมือคุณ</p>
+            <button class="order-btn" onclick="orderTimemachine()">เรียกใช้บริการ Timemachine</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Atelier de Boulette. All eras reserved.</p>
+    </footer>
+
+    <!-- JavaScript (ส่วนของ JARVA/JS) -->
+    <script>
+        function orderTimemachine() {
+            let era = prompt("กรุณาระบุยุคสมัยหรือปีที่คุณต้องการให้เราไปส่ง (เช่น ปี ค.ศ. 3000, ยุคเรเนสซองส์):");
+            if (era) {
+                alert(`🚀 ตั้งพิกัดเวลาเรียบร้อย! "Atelier de Boulette" กำลังจัดส่งลูกชิ้นเวย์โปรตีนไปให้คุณในยุค ${era} กรุณารอรับของได้เลยครับ!`);
+            } else {
+                alert("กรุณาระบุยุคสมัยเพื่อตั้งพิกัดไทม์แมชชีนครับ");
+            }
+        }
+    </script>
+</body>
+</html>
